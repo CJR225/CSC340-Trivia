@@ -28,16 +28,20 @@ public class ClientWindow implements ActionListener
     {
         JOptionPane.showMessageDialog(window, "This is a trivia game");
         
-        window = new JFrame("Trivia");
-        question = new JLabel("Q1. This is a sample question"); // represents the question
+        window = new JFrame("Networking Trivia Show");
+        question = new JLabel("Q1. What does IP stand for in networking?"); // represents the question
         window.add(question);
         question.setBounds(10, 5, 350, 100);;
         
         options = new JRadioButton[4];
+		options[0] = new JRadioButton("Internet Protocol");
+        options[1] = new JRadioButton("Internal Process");
+        options[2] = new JRadioButton("Interesting Packet");
+        options[3] = new JRadioButton("Infinite Possibilities");
+
         optionGroup = new ButtonGroup();
         for(int index=0; index<options.length; index++)
         {
-            options[index] = new JRadioButton("Option " + (index+1));  // represents an option
             // if a radio button is clicked, the event would be thrown to this class to handle
             options[index].addActionListener(this);
             options[index].setBounds(10, 110+(index*20), 350, 20);
@@ -87,10 +91,10 @@ public class ClientWindow implements ActionListener
         String input = e.getActionCommand();  
         switch(input)
         {
-            case "Option 1":
-            case "Option 2":
-            case "Option 3":
-            case "Option 4":
+            case "Internet Protocol": System.out.println("Correct Option");
+            case "Internal Process":
+            case "Interesting Packet":
+            case "Infinite Possibilities":
                 // Send selected option to server using TCP
                 sendSelectedOptionToServer(input);
                 break;
