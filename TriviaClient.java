@@ -22,7 +22,7 @@ public class TriviaClient {
             
             // Now, launch the GUI with the ClientID
             javax.swing.SwingUtilities.invokeLater(() -> {
-                new ClientWindow(clientID); // Assuming ClientWindow is updated to accept clientID as a parameter
+                new ClientWindow(clientID,"./questions.json"); // Assuming ClientWindow is updated to accept clientID as a parameter
             });
             
         } catch (UnknownHostException e) {

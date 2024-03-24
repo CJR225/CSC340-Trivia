@@ -2,6 +2,6 @@ public class ClientWindowTest
 {
 	public static void main(String[] args)
 	{
-		ClientWindow window = new ClientWindow(null);
+		ClientWindow window = new ClientWindow(null,"./questions.json");
 	}
 }
