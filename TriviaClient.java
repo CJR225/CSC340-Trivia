@@ -2,22 +2,27 @@ import java.io.*;
 import java.net.*;
 
 public class TriviaClient {
-    public static void main(String[] args) {
-        String hostname = "localhost";
-        int port = 5000;
+    private String hostname;
+    private int port;
+    private String clientID;
 
+    public TriviaClient(String hostname, int port) {
+        this.hostname = hostname;
+        this.port = port;
+    }
+
+    public void connectToServer() {
         try (Socket socket = new Socket(hostname, port)) {
             System.out.println("Connected to the server at " + hostname + " on port " + port);
 
-            PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-            // Sending a message to the server upon connecting
-            out.println("Hello, server! The GUI will now launch.");
+            BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            // Read the client ID assigned by the server
+            clientID = in.readLine().replace("Your Client ID: ", "").trim();
+            System.out.println("Assigned Client ID: " + clientID);
             
-            // Now, launch the GUI
-            javax.swing.SwingUtilities.invokeLater(new Runnable() {
-                public void run() {
-                    new ClientWindow(); // Assuming ClientWindow is updated to be runnable
-                }
+            // Now, launch the GUI with the ClientID
+            javax.swing.SwingUtilities.invokeLater(() -> {
+                new ClientWindow(clientID); // Assuming ClientWindow is updated to accept clientID as a parameter
             });
             
         } catch (UnknownHostException e) {
@@ -25,5 +30,10 @@ public class TriviaClient {
         } catch (IOException e) {
             System.out.println("I/O error: " + e.getMessage());
         }
+    }
+
+    public static void main(String[] args) {
+        TriviaClient client = new TriviaClient("localhost", 5000);
+        client.connectToServer();
     }
 }

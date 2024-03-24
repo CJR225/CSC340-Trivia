@@ -24,8 +24,10 @@ public class ClientWindow implements ActionListener
     // Placeholder for client ID
     private String clientID;
     
-    public ClientWindow()
-    {
+    public ClientWindow(String clientID) {
+
+		this.clientID = clientID;
+		
         JOptionPane.showMessageDialog(window, "This is a trivia game");
         
         window = new JFrame("Networking Trivia Show");
