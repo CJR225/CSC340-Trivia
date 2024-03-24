@@ -67,5 +67,11 @@
         "questionId": 8,
         "questionTitle": "What is the purpose of a subnet mask?",
         "option1": "To determine the network portion of an IP address",
-        "option2": "To 
+        "option2": "To encrypt data transmitted over the network",
+        "option3": "To identify the physical location of a device",
+        "option4": "To allocate IP addresses dynamically",
+        "correctAnswer": "option1"
+      }
+    ]
+  }
   
