@@ -1,6 +1,0 @@
-{
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "/Users/chrisrocco/Desktop/VScode/json-simple-1.1.1.jar"
-    ]
-}

@@ -1,0 +1,47 @@
+Q1. What protocol is used for transmitting email over the Internet?
+Option1: TCP
+Option2: SMTP
+Option3: UDP
+Option4: HTTP
+
+Q2. What does DNS stand for in networking?
+Option1: Domain Name System
+Option2: Dynamic Network Service
+Option3: Data Network System
+Option4: Digital Naming Service
+
+Q3. Which device is used to connect multiple computers in a local area network?
+Option1: Router
+Option2: Modem
+Option3: Switch
+Option4: Hub
+
+Q4. What is the purpose of the TCP protocol?
+Option1: Ensuring reliable communication by providing error checking and flow control
+Option2: Resolving domain names to IP addresses
+Option3: Transmitting files between computers
+Option4: Broadcasting messages to all devices on a network
+
+Q5. Which of the following is NOT a valid IP address class?
+Option1: Class A
+Option2: Class B
+Option3: Class C
+Option4: Class D
+
+Q6. What is the default port number for HTTP?
+Option1: 80
+Option2: 443
+Option3: 21
+Option4: 25
+
+Q7. Which network topology connects each device to a central hub?
+Option1: Star
+Option2: Bus
+Option3: Ring
+Option4: Mesh
+
+Q8. What is the purpose of a subnet mask?
+Option1: To determine the network portion of an IP address
+Option2: To encrypt data transmitted over the network
+Option3: To identify the physical location of a device
+Option4: To allocate IP addresses dynamically
